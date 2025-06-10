@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMOCARE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar-brand img {
+            height: 30px;
+            margin-right: 20px;
+        }
+        .top-header {
+            background-color: #f1c5dd;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .top-header .logo img {
+            height: 50px;
+        }
+        .top-header .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #c71585;
+        }
+        .top-header .hotline {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .top-header .search-bar {
+            width: 100%;
+        }
+        .top-header .cart img{
+            height:50px;
+            
+        }
+        .hero-section {
+            background-color: transparent;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        .btn-shop {
+            margin-top: 20px;
+            background-color: #c71585;
+            border: none;
+        }
+        .btn-shop:hover {
+            background-color: #a0136e;
+        }
+        .card {
+            border-radius: 1rem;
+            background-color: #ffffff;
+            border: none;
+        }
+        .main-section {
+            padding: 60px 30px;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #c71585;
+            margin-bottom: 30px;
+        }
+        .animated-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .animated-images img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 0;
+            animation: slideShow 60s infinite;
+        }
+        .animated-images img:nth-child(1) { animation-delay: 0s; }
+        .animated-images img:nth-child(2) { animation-delay: 5s; }
+        .animated-images img:nth-child(3) { animation-delay: 10s; }
+        .animated-images img:nth-child(4) { animation-delay: 15s; }
+        .animated-images img:nth-child(5) { animation-delay: 20s; }
+        .animated-images img:nth-child(6) { animation-delay: 25s; }
+        .animated-images img:nth-child(7){ animation-delay:30;}
+
+        @keyframes slideShow {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            20% { opacity: 1; }
+            25% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        .card-title {
+            color: #c71585;
+            font-weight: bold;
+        }
+        .card-text {
+            color: black;
+        }
+        .btn-primary {
+            background-color: #c71585;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #a0136e;
+        }
+
+        
+       .register-card, .login-card {
+          background: black;
+          border-radius: 1rem;
+          padding: 2rem;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 500px;
+          margin: auto;
+       }
+
+      .text-pink {
+         color: #d63384;
+     }
+     #video-container {
+      width: 640px;
+      margin: 50px auto;
+      position: relative;
+    }
+    #play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Fullscreen Animated Images -->
+    <div class="animated-images">
+        <img src="images store/spa celon.jpg" alt="1">
+        <img src="images store/beauty image.jpg" alt="2">
+        <img src="images store/stock makeup.jpg" alt="3">
+        <img src="images store/hair4.jpeg" alt="4">
+        <img src="images store/parlour.jpg" alt="5">
+        <img src="images store/spa gold.jpg" alt="6">
+        <img src="images store/hair6.jpg" alt="7">
+    </div>
+
+    <!-- Top Header Section -->
+    <div class="container-fluid top-header">
+        <div class="row align-items-center px-4">
+            <div class="col-md-2 logo">
+                <img src="C:\cosmetic store\images store\cosmocare logo.jpg" alt="Logo">
+            </div>
+            <div class="col-md-2 title">
+                COSMOCARE....
+            </div>
+            <div class="col-md-3">
+                <div class="input-group search-bar">
+                    <input type="text" class="form-control" placeholder="Search products...">
+                    <button class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+            <div class="col-md-2 text-end hotline">
+                Hotline: +41-4432691
+            </div>
+            <div class="col-md-3 text-end">
+                <a href="#cart" class="me-3">Cart</a>
+                
+                <div class="dropdown d-inline">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        All Categories
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item" href="#skincare">Skin Care</a></li>
+                        <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                        <li><a class="dropdown-item" href="#nails">Nails</a></li>
+                        <li><a class="dropdown-item" href="#gifts">Gifts</a></li>
+                        <li><a class="dropdown-item" href="#accessories">Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <li><a class="dropdown-item" href="#shop">Shop All</a></li>
+                            <li><a class="dropdown-item" href="#skincare">Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#nails">Nails</a></li>
+                            <li><a class="dropdown-item" href="#gifts">Gift & Bundles</a></li>
+                            <li><a class="dropdown-item" href="#accessories">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lifestyle">BE Lifestyle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academy">Academy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#style">Style</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sale">Sale</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+  <div class="container">
+    <a class="navbar-brand text-pink fw-bold" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="logo" width="30" class="me-2">
+      CosmoCare
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
+
+    <!-- Hero Section -->
+<div class="hero-section">
+    <h1>Welcome to COSMOCARE</h1>
+    <p>Explore premium beauty products made with elegance and care</p>
+    <a href="#products" class="btn btn-lg btn-light btn-shop">Shop Now</a>
+</div>
+
+
+
+
+  
+
+
+<!-- Bootstrap Card Section -->
+<div class="container my-5">
+  <div class="row">
+    <!-- your cards here... -->
+  </div>
+</div>
+
+
+    <!-- Bootstrap Card Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="C:\cosmetic store\images store\olay.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Moisturizing Cream</h5>
+                        <p class="card-text"> OLAY NATURAL AURA DAY CREAM (SPF 15) 50G. Day cream RS 1390/=</p>
+
+                        <p class="card-text">Hydrates and nourishes your skin for a radiant glow.</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="C:\cosmetic store\images store\seerum.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Hair Repair Serum</h5>
+                        <p class="card-text"> Hair Mask With Moroccan Argan Oil Extract 220ml. RS 2380/=</p>
+                        <p class="card-text">Restores and strengthens damaged hair strands.</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="C:\cosmetic store\images store\naila.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nail Polish Set</h5>
+                        <p class="card-text">Viana Halloween Nail Polish Collection RS 690/=</p>
+                        <p class="card-text">Vibrant colors and long-lasting shine for your nails.</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
